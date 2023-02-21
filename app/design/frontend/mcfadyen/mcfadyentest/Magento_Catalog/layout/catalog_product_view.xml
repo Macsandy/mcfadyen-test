@@ -1,6 +1,24 @@
 <?xml version="1.0"?>
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="3columns" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <css src="css/custom.less" rel="stylesheet" type="text/css"  />
+        <css src="css/custom.css" rel="stylesheet" type="text/css"  />
     </head>
+    <body>
+        <move element="view.addto.wishlist" destination="product.info.media" before="skip_gallery_before.wrapper"/>
+        <move element="product.info.addtocart" destination="sidebar.additional"/>
+        <move element="product.info.price" destination="sidebar.additional" after="page.main.title"/>
+        <move element="page.main.title" destination="sidebar.additional"/>
+        <move element="product.info.details" destination="product.info.main"/>
+        <move element="product.info.overview" destination="columns" after="product.info.main"/>
+        
+        <referenceBlock name="wishlist_sidebar" remove="true"/>
+        <referenceBlock name="breadcrumbs" remove="true"/>
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        <referenceBlock name="product.info.review" remove="true"/>
+        <referenceBlock name="product.info.social" remove="true"/>
+        <referenceBlock name="product.info.stock.sku" remove="true"/>
+
+        <referenceContainer name="footer" remove="true" />
+        
+    </body>
 </page>
