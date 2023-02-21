@@ -7,6 +7,7 @@
         <move element="view.addto.wishlist" destination="product.info.media" before="skip_gallery_before.wrapper"/>
         <move element="product.info.addtocart" destination="sidebar.additional"/>
         <move element="product.info.price" destination="sidebar.additional" after="page.main.title"/>
+        <move element="product.info" destination="sidebar.additional" after="page.main.title"/>
         <move element="page.main.title" destination="sidebar.additional"/>
         <move element="product.info.details" destination="product.info.main"/>
         <move element="product.info.overview" destination="columns" after="product.info.main"/>
